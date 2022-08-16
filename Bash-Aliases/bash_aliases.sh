@@ -1,7 +1,7 @@
 alias venv='virtualenv -p python2.7 venv' # creating python 2 virtual env
 alias actv='source /home/kali/venv/bin/activate' # activate a created virtual env
 alias server='sudo python3 -m http.server 80' # static web server
-alias ghidra='python3 /home/kali/tools/ghidra-auto/ghidra.py' #open ghidra with one command - Not necessarily useful for OSCP
+alias ghidra='python3 /home/kali/tools/ghidra-auto/ghidra.py' #open ghidra with one command - Not necessarily useful for OSCP lol
 alias pwdcp='pwd | xclip -selection clipboard' # copy path of current working directory
 
 # Port Scanning
