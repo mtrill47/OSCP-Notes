@@ -13,6 +13,7 @@ Usage: `rusty <IP>`
 rusty() {
     IP=$1
     /home/kali/.cargo/bin/rustscan -a "$IP" -- -A -v -oN $PWD/nmapinit }
+```
 
 ### SMB Enum
 Nmap and Enum4linuxng using a bash alias. This creates a directory called Enum in the current working directory.
@@ -31,3 +32,4 @@ Usage: `win-enum <IP>`
     /home/kali/tools/enum4linux-ng/enum4linux-ng.py -A "$IP" -oY $PWD/enum/enum4l
 
 }
+```
