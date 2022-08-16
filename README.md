@@ -5,8 +5,9 @@ There are a bunch of sections in these notes, some sections have their own folde
 
 ## Recon
 Rustscan combined with Nmap with using a bash alias
+
 Usage: `rusty <IP>`
 ```# rustscan all ports
 rusty() {
     IP=$1
-    /home/kali/.cargo/bin/rustscan -a "$IP" -- -A -v -oN $PWD/nmapinit```
+    /home/kali/.cargo/bin/rustscan -a "$IP" -- -A -v -oN $PWD/nmapinit }
