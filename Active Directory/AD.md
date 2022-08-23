@@ -157,3 +157,37 @@ be sure to try a password that might fit in a password policy
 this is some sort of cpassword or something
 
 `gpp-decrypt <hash>`
+
+# AD Enumeration (Post Compromise)
+
+### Powerview
+
+Quick Commands:
+
+- `Get-NetDomain`
+
+- `Get-NetDomainController`
+
+- `Get-DomainPolicy`
+
+- `(Get-DomainPolicy)."system access"`
+
+- `Get-NetUser | select <command> eg select cn, description`
+
+- `Get-userProperty -Properties pwdlastset`
+
+- `Get -UserProperty -Properties logoncount` : don't attack accounts with low logoncount because they might be honeypot account. As soon as you compromise it, the security team will be alerted of your presence.
+
+You can find a whole powerview cheatsheet here: [https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)
+
+### Bloodhound
+
+1. Connect to the database by running: `sudo neo4j console`
+2. run `bloodhound` in new tab
+3. Transfer the SharpHound.ps1 script to the victim machine and invoke powershell using `powershell -ep bypass`
+4. Import the module: `. .\SharpHound.ps1`
+5. Collect the data: `Invoke-BloodHound -CollectionMethod All -Domain SCRIPTKIDDIEHUB -ZipFileName tadi.zip`
+
+or use `SharpHound.exe -c All`
+
+Transfer the zip file to your attacker machine and upload it to bloodhound where it will put it all in graphs
