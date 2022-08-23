@@ -31,6 +31,7 @@ win-enum() {
 
 
 # netcat reverse shell
+# Usage: rev <IP>
 rusty() {
     IP=$1
     /home/kali/.cargo/bin/rustscan -a "$IP" -- -A -v -oN $PWD/nmapinit

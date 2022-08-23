@@ -17,4 +17,6 @@ you can copy from windows machine using: `copy C:\bank-account.zip Z:\bank-accou
 `Z:\` would be the name of the share that you opened
 
 ## PHP Server
+If php is installed on the windows client, host a server and connect to it from your kali machine
+
 `php -S 0.0.0.0:<IP>`
